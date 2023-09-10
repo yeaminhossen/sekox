@@ -1,0 +1,58 @@
+.postbox__thumb .play-btn {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    height: 90px;
+    width: 90px;
+    background-color: var(--tp-common-white);
+    text-align: center;
+    line-height: 90px;
+    color: var(--tp-theme-1);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.blog-post-slider-nav .nav-button {
+    height: 60px;
+    width: 60px;
+    background-color: var(--tp-common-white);
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    color: var(--tp-common-black);
+}
+
+.blog-post-slider-nav .nav-button {
+    height: 60px;
+    width: 60px;
+    background-color: var(--tp-common-white);
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    color: var(--tp-common-black);
+}
+.blog-nav-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 5;
+}
+
+.blog-nav-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 5;
+}
+
+.blog-post-slider-active img {
+	border-radius: 6px 6px 0 0;
+}

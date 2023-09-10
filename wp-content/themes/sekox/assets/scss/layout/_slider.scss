@@ -1,0 +1,99 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  09. SLIDER CSS
+/*----------------------------------------*/
+
+.tpsolid {
+    &__item {
+        &:hover {
+            & .tpsolid__thumb::before {
+                background-color: rgb(5, 13, 28);
+                opacity: 0.7;
+            }
+            & .tpsolid__title {
+                color: var(--tp-common-5);
+            }
+            & .tpsolid__title span {
+                opacity: .8;
+            }
+            & .tpsolid__thumb {
+                transform: translate3d(0px, 0, 0px) scale3d(0.955, 0.975, 1) skew(0deg);
+            }
+        }
+        & .tpcommon__hover a {
+            background-image: linear-gradient(#f04037, #f04037), linear-gradient(#f04037, #f04037);
+        }
+    }
+    &__thumb {
+        @include transition(.3s);
+        & img {
+            border-radius: 6px;
+            width: 100%;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(179.97deg, rgba(8, 11, 27, 0) 40.71%, #000 98.16%);
+            border-radius: 6px;
+            @include transition(.3s);
+        }
+    }
+    &__content {
+        position: absolute;
+        bottom: 30px;
+        padding: 40px 45px;
+        padding-bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 6px;
+        @media #{$md} {
+            padding: 40px 30px;
+            padding-bottom: 0;
+        }
+        @media #{$xs} {
+            padding: 40px 30px;
+            padding-bottom: 0;
+        }
+        @media #{$sm} {
+            padding: 40px 20px;
+            padding-bottom: 0;
+        }
+        & span {
+            font-size: 16px;
+            color: var(--tp-common-white);
+            opacity: .7;
+        }
+    }
+    &__title {
+        color: var(--tp-common-white);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+        @include transition(.3s);
+        letter-spacing: -0.8px;
+        @media #{$xl} {
+            font-size: 28px;
+        }
+        @media #{$lg} {
+            font-size: 20px;
+            letter-spacing: 0;
+        }
+        @media #{$md} {
+            font-size: 24px;
+            letter-spacing: 0;
+        }
+        @media #{$xs} {
+            font-size: 22px;
+            letter-spacing: 0;
+        }
+        @media #{$sm} {
+            font-size: 20px;
+            letter-spacing: 0;
+        }
+    }
+}

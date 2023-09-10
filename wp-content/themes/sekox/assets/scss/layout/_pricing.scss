@@ -1,0 +1,205 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. PRICING CSS
+/*----------------------------------------*/
+
+.tppricing {
+    &__wrapper {
+        box-shadow: 0px 40px 70px 0px rgba(0, 10, 38, 0.1);
+        padding: 55px 40px;
+        border-radius: 10px;
+        @media #{$lg,$xs} {
+            padding: 45px 30px;
+        }
+    }
+    &__feature {
+        & ul {
+            & li {
+                list-style: none;
+                color: var(--tp-grey-2);
+                font-size: 16px;
+                padding-left: 20px;
+                position: relative;
+                margin-bottom: 5px;
+                @media #{$lg,$xs} {
+                    font-size: 14px;
+                }
+                &.price-disable {
+                    color: #d5d5d5;
+                    &::before {
+                        background-color: #d5d5d5;
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: 7px;
+                    width: 7px;
+                    border-radius: 50%;
+                    background-color: var(--tp-theme-2);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                }
+            }
+        }
+    }
+    &__sub-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--tp-text-body);
+        line-height: 1;
+        margin-bottom: 0;
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--tp-grey-2);
+        line-height: 1;
+        & i {
+            font-style: normal;
+            font-size: 24px;
+            font-style: 600px;
+            color:var(--tp-text-body);
+        }
+        & span {
+            display: inline-block;
+            font-size: 70px;
+            font-weight: 600;
+            color: var(--tp-text-body);
+        }
+    }
+    &__btn {
+        & a {
+            text-align: center;
+            display: block;
+            &::before {
+                background-color: var(--tp-theme-2);
+                border-radius: 6px;
+            }
+            &:hover {
+                color: var(--tp-common-white);
+            }
+        }
+    }
+    &__head {
+        & p {
+            font-size: 16px;
+            padding-bottom: 10px;
+            @media #{$lg} {
+                font-size: 14px;
+            }
+            @media #{$xs} {
+                font-size: 15px;
+            }
+        }
+    }
+    &__wrapper-tow {
+        background-color: var(--tp-grey-12);
+        box-shadow: none;
+        padding: 45px 40px;
+        @media #{$lg} {
+            padding: 45px 30px;
+        }
+        @media #{$xs} {
+            padding: 45px 25px;
+        }
+        & .tppricing__head {
+            border-bottom: 1px solid rgba($color: #646374, $alpha: 0.1);
+        }
+        & .tppricing__btn {
+            & .tp-btn {
+                background-color: var(--tp-common-white);
+                color: var(--tp-text-body);
+                box-shadow: 0px 1px 2px 0px rgba(0, 23, 76, 0.1);
+                &:hover {
+                    color: var(--tp-common-white);
+                }   
+            }
+        }
+        & .tppricing__sub-title {
+            margin-bottom: 17px;
+        }
+    }
+    &__feature-two {
+        & ul {
+            & li {
+                list-style: none;
+                position: relative;
+                padding-left: 35px;
+                color: #4e4e66;
+                font-size: 16px;
+                margin-bottom: 10px;
+                & i {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    color: var(--tp-theme-2);
+                    @include square-bg(22px, $circle:'true');
+                    background-color: rgba($color: #4e4e66, $alpha: 0.08);
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    &__wrapper-three {
+        border-radius: 6px;
+        & .tppricing__feature-two ul li {
+            color: var(--tp-common-white);
+        }
+        & .tppricing__feature-two ul li i {
+            color: var(--tp-common-white);
+            background-color: rgba($color: #fff, $alpha: 0.08);
+        }
+        & .tppricing__head {
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+        }
+        & .tppricing__title {
+            color: var(--tp-common-white);
+        }
+        & .tppricing__head p {
+            color: var(--tp-common-white);
+        }
+    }
+    &__shape {
+        position: absolute;
+        top: -110px;
+        right: -110px;
+    }
+    &__shape-three {
+        position: absolute;
+        top: -190px;
+        right: -90px;
+    }
+}
+.tpfree {
+    &__pricing {
+        background-color: var(--tp-theme-2);
+        & .tppricing__sub-title {
+            color: var(--tp-common-white);
+        }
+        & .tppricing__title span {
+            color: var(--tp-common-white);
+        }
+        & .tppricing__feature ul li {
+            color: var(--tp-common-white);
+        }
+        & .tppricing__feature ul li::before {
+            background-color: var(--tp-common-white);
+        }
+        & .tppricing__btn a {
+            background-color: var(--tp-common-white);
+            color: var(--tp-text-body);
+        }
+        & .tppricing__btn a:hover {
+            color: var(--tp-common-white);
+        }
+        & .tppricing__btn a::before {
+            background-color: var(--tp-theme-1);
+            border-radius: 6px;
+            color: var(--tp-common-white);
+        }
+    }
+}

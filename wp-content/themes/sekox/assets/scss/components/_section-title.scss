@@ -1,0 +1,95 @@
+@use '../utils' as *;
+
+
+.tpsection {
+    &__sub-title {
+        color: var(--tp-theme-2);
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__title {
+        color: var(--tp-text-body);
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.14;
+        @media #{$lg} {
+            font-size: 30px;
+        }
+        @media #{$md} {
+            font-size: 28px;
+        }
+        @media #{$xs} {
+            font-size: 18px;
+        }
+        @media #{$sm} {
+            font-size: 40px;
+        }
+        & br {
+            @media #{$md,$xs,$sm} {
+                display: none;
+            }
+        }
+    }
+    &__content {
+        & p {
+            font-size: 18px;
+            color: var(--tp-grey-2);
+            line-height: 28px;
+            @media #{$md,$xs} {
+                font-size: 16px;
+            }
+            & br {
+                @media #{$xs,$sm} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__content-two {
+        & p {
+            color: var(--tp-grey-8);
+            & br {
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__content-three {
+        & p {
+            color: var(--tp-common-white);
+            opacity: .7;
+            & br {
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+        & .tpsection__title {
+            color: var(--tp-common-white);
+            @media #{$md} {
+                font-size: 30px;
+            }
+            & br {
+                @media #{$lg} {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.tpcommon {
+    &__hover {
+        & a  {
+            background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+            display: inline;
+            background-size: 0% 1px, 0 1px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 0.4s linear;
+            &:hover {
+                background-size: 0% 1px, 100% 1px;
+            }
+        }
+    }
+}

@@ -1,0 +1,231 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  04. ABOUT CSS
+/*----------------------------------------*/
+
+.tpabout {
+    &__sub-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--tp-theme-1);
+    }
+    &__title {
+        font-size: 44px;
+        font-weight: 700;
+        color: var(--tp-text-body);
+        line-height: 1.14;
+        @media #{$xs} {
+            font-size: 28px;
+        }
+    }
+    &__content {
+        & p {
+            font-size: 20px;
+            color: var(--tp-text-body);
+            line-height: 30px;
+            & br {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__thumb {
+        margin-left: -100px;
+        @media #{$lg,$md,$xs,$sm} {
+            margin-left: 0px;
+        }
+        & img {
+            max-width: inherit;
+            @media #{$lg,$md,$xs} {
+                max-width: 100%;
+            }
+        }
+        &-img {
+            position: relative;
+            z-index: 9;
+            display: inline-block;
+            &:hover {
+                &::before {
+                transform: none;
+                }
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                background: rgba($color: #6de4f1, $alpha: 1);
+                border-radius: 15px;
+                transform: rotate(8.95deg);
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                @include transition(.3s);
+                @media #{$xs} {
+                    transform: rotate(0deg);
+                }
+            }
+            & img {
+                border-radius: 15px;
+            }
+        }
+    }
+    &__services {
+        &-item {
+            background-color: var(--tp-common-white);
+            padding: 35px 40px 20px 40px;
+            box-shadow: 0px 50px 70px 0px rgba(0, 10, 38, 0.1);
+            border-radius: 6px;
+            @media #{$md} {
+                padding: 25px 15px 15px 15px;
+            }
+            &:hover {
+                & .tpabout__services-text a i {
+                    color: var(--tp-theme-1);
+                    animation: shake-next 1s ease infinite;
+                }
+                & .tpabout__services-icon img {
+                    transform: translate3d(0, -5px, 0);
+                }
+            }
+        }
+        &-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--tp-text-body);
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 16px;
+            }
+            & br {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-icon {
+            & img {
+                height: 50px;
+                width: 50px;
+                object-fit: cover;
+                transform: translate3d(0, 0, 0);
+                transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+            }
+        }
+        &-text {
+            & a {
+                & i {
+                    font-size: 25px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &__thumb-two {
+        & img {
+            border-radius: 6px;
+        }
+    }
+    &__shape {
+        &-one {
+            position: absolute;
+            top: 50px;
+            left: 25px;
+            animation: soft-move 3s infinite linear;
+        }
+        &-two {
+            position: absolute;
+            top: 185px;
+            right: 170px;
+            animation: soft-move-y 2s infinite linear;
+        }
+        &-three {
+            position: absolute;
+            top: 185px;
+            right: 66px;
+            animation: soft-move 2s infinite linear;
+        }
+        &-four {
+            position: absolute;
+            top: 305px;
+            right: 90px;
+            animation: hero-round 3s infinite alternate;
+            z-index: 9; 
+        }
+    }
+    &__graph {
+        @media #{$md} {
+            margin-bottom: 25px;
+        }
+    }
+    &__graph-title {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--tp-grey-8);
+    }
+    &__graph-count {
+        font-size: 36px;
+        font-weight: 600;
+        & img {
+            animation: hero-bounce 5s infinite both;
+        }
+    }
+    &__item {
+        &-title {
+            font-size: 22px;
+            color: var(--tp-text-1);
+            font-weight: 600;
+            line-height: 30px;
+            margin-bottom: 3px;
+            @media #{$xs} {
+                font-size: 16px;
+            }
+        }
+    }
+    &__item-content {
+        & p {
+            color: var(--tp-common-7);
+            font-size: 16px;
+            line-height: 20px;
+            @media #{$xs} {
+                font-size: 12px;
+            }
+            & br{
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__thumb-three {
+        @media #{$md} {
+            text-align: center;
+        }
+    }
+    &__content-three {
+        @media #{$md} {
+            text-align: center;
+        }
+    }
+    &__wrapper-two {
+        @media #{$md} {
+            justify-content: center !important;
+        }
+    }
+    &__content-two {
+        @media #{$md,$xs,$sm} {
+           padding-left: 0;
+        }
+    }
+    &__btn-two {
+        & .tp-btn-two {
+            border-radius: 6px;
+        }
+        & .tp-orang-btn::before {
+            background-color: var(--tp-theme-2);
+            border-radius: 6px;
+        }
+    }
+}

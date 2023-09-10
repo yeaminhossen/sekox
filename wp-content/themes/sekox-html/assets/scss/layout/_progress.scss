@@ -1,0 +1,126 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  05. PROGRESS CSS
+/*----------------------------------------*/
+
+
+.tpprogress {
+    &__sub-title {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    &__item {
+        position: relative;
+        margin-bottom: 25px;
+        & .progress {
+            height: 6px;
+            border-radius: 0px;
+            width: 100%;
+            & .progress-bar {
+                background-color: var(--tp-theme-1);
+                &.progress-theme-bg {
+                    background-color: var(--tp-text-body);
+                }
+                &.progress-theme-bg-2 {
+                    background-color: var(--tp-theme-2);
+                }
+                & span {
+                    position: absolute;
+                    font-size: 16px;
+                    top: 6px;
+                    right: 0;
+                    color: var(--tp-text-body);
+                    line-height: 1;
+                    font-weight: 500;
+                    margin: 0 0 0 0px;
+                }
+            }
+        }
+    }
+}
+.tpskill {
+    &__avata {
+        &-icon {
+            flex: 0 0 auto;
+            & img {
+                height: 55px;
+                width: 55px;
+                border-radius: 50px;
+            }
+        }
+        &-content {
+            & span {
+                font-size: 16px;
+                color: var(--tp-grey-2);
+                line-height: 22px;
+            }
+        }
+        &-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--tp-text-body);
+            line-height: 22px;
+            margin-bottom: 0;
+        }
+    }
+    &__thumb {
+        & > img {
+            border-radius: 10px;
+            width: 100%;
+        }
+        &-one {
+            margin-left: -30px;
+            @media #{$lg,$md,$xs} {
+                margin-left: 0px;
+            }
+        }
+        &-two {
+            margin-top: -165px;
+        }
+        &__shape {
+            &-one {
+                position: absolute;
+                right: 10px;
+                top: -60px;
+                z-index: -1;
+                animation: soft-move 1.5s infinite linear;
+                @media #{$lg} {
+                    right: 0;
+                }
+            }
+            &-two {
+                position: absolute;
+                left: 68px;
+                top: -95px;
+                box-shadow: 0px 30px 50px 0px rgba(0, 10, 38, 0.16);
+                animation: hero-bounce 3s infinite both;
+                @media #{$xs} {
+                    left: 5px;
+                    top: -60px;
+                }
+            }
+        }
+        &__review {
+            background-color: var(--tp-common-white);
+            box-shadow: 0px 30px 50px 0px rgba(0, 10, 38, 0.16);
+            position: absolute;
+            left: 228px;
+            bottom: 50px;
+            padding: 9px 26px;
+            border-radius: 6px;
+            animation: hero-bounce 4s infinite both;
+            @media #{$xs} {
+                left: 140px;
+                bottom: 110px;
+            }
+            & i {
+                color: var(--tp-common-4);
+                font-size: 14px;
+                display: inline-block;
+            }
+        }
+    }
+}

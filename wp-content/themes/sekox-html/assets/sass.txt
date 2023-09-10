@@ -1,0 +1,1 @@
+sass --watch "C:\Users\Iconic Galaxy\Dropbox\Matiour\sekox\seko\assets\scss\main.scss":"C:\Users\Iconic Galaxy\Dropbox\Matiour\sekox\seko\assets\css\main.css"

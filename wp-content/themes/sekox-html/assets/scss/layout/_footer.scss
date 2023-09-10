@@ -1,0 +1,208 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  16. FOOTER CSS
+/*----------------------------------------*/
+
+.tpfooter {
+    &__main {
+        border-bottom: 1px solid var(--tp-border-1);
+    }
+    &__widget {
+        &-info {
+            & p {
+                line-height: 24px;
+                font-size: 16px;
+                color: var(--tp-grey-4);
+                margin-bottom: 30px;
+            }
+        }
+        &-title {
+            font-size: 21px;
+            font-weight: 600;
+            color: var(--tp-text-body);
+        }
+        &-social {
+            & a {
+                margin-right: 5px;
+                & i {
+                    height: 45px;
+                    width: 45px;
+                    text-align: center;
+                    line-height: 45px;
+                    background-color: var(--tp-common-white);
+                    color: var(--tp-grey-6);
+                    font-size: 15px;
+                    border-radius: 6px;
+                    display: inline-block;
+                    &:hover {
+                        background-color: var(--tp-common-5);
+                        color: var(--tp-common-white);
+                    }
+                }
+            }
+            &-title {
+                font-size: 18px;
+                font-weight: 500;
+                color: var(--tp-common-white);
+            }
+        }
+        &-content {
+            & ul {
+                & li {
+                    list-style: none;
+                    margin-bottom: 3px;
+                    & a {
+                        display: inline-block;
+                        font-size: 16px;
+                        color: var(--tp-grey-2);
+                        line-height: 2;
+                        &:hover {
+                            color: var(--tp-common-5);
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        &-subscribe {
+            position: relative;
+            &-input {
+                position: relative;
+                & input {
+                    width: 100%;
+                    height: 55px;
+                    border-radius: 6px;
+                    border: 0;
+                    box-shadow: 0px 1px 3px 0px rgba(11, 19, 42, 0.1);
+                    background-color: var(--tp-common-white);
+                    font-size: 15px;
+                    color: var(--tp-text-body);
+                    padding: 2px 20px 2px 50px;
+                    &::placeholder {
+                        font-size: 15px;
+                        color: var(--tp-grey-5);
+                    }
+                }
+                & span {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 25px;
+                    display: inline-block;
+                }
+            }
+            &-btn {
+                & .tp-btn {
+                    background-color: var(--tp-common-5);
+                }
+            }
+        }
+    }
+    &__copy-right {
+        &__content {
+            & span {
+                color: var(--tp-grey-4);
+                font-size: 15px;
+                & a {
+                    color: var(--tp-common-5);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    &__col-2 {
+        margin-left: -30px;
+        @media #{$lg,$md,$xs,$sm} {
+            margin-left: 0;
+        }
+    }
+    &__col-3 {
+        margin-left: 30px;
+        @media #{$md,$xs,$sm} {
+            margin-left: 0;
+        }
+    }
+    &__location {
+        @media #{$xs} {
+            margin-left: 0;
+        }
+        &-icon {
+            & i {
+                color: var(--tp-common-white);
+                font-size: 37px;
+                transform: translateY(2px);
+                flex: 0 0 auto;
+                margin-right: 17px;
+            }
+        }
+        &-content {
+            & a {
+                color: #b4bac3;
+                font-size: 16px;
+                line-height: 1.4;
+                display: block;
+                &:hover {
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+    }
+    &__address {
+        @media #{$xs} {
+            flex-wrap: wrap;
+            justify-content: start !important;
+        }
+    }
+    &__theme-bg {
+        & .tpfooter__widget-title {
+            color: var(--tp-common-10);
+        }
+        & .tpfooter__widget-content ul li a {
+            color: #b4bac3;
+            &:hover {
+                color: var(--tp-common-5);
+            }
+        }
+        & .tpfooter__widget-subscribe-input input {
+            border-radius: 50px;
+        }
+        & .tp-btn {
+            border-radius: 50px;
+        }
+        & .tpfooter__widget-social a i {
+            background-color: transparent;
+            color: var(--tp-common-white);
+            border-radius: 50px;
+            border: 1px solid rgba($color: #fff, $alpha: 0.1);
+            &:hover {
+                background-color: var(--tp-common-5);
+                border:1px solid var(--tp-common-5);
+            }
+        }
+        & .tpfooter__main {
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.06);
+        }
+        & .tpfooter__copy-right__content span {
+            color: #676a6f;
+            font-size: 15px;
+        }
+        & .tpfooter__widget-info p {
+            color: var(--tp-border-3);
+            &:hover {
+                color: var(--tp-common-white);
+            }
+        }
+    }
+    &__logo-area-border {
+        border-bottom: 1px solid rgba($color: #b4bac3, $alpha: 0.1);
+    }
+    &__copy-right-two {
+        & .tpfooter__copy-right__content span a {
+            color: var(--tp-common-white);
+        }
+        & i {
+            color: var(--tp-common-5);
+        }
+    }
+}

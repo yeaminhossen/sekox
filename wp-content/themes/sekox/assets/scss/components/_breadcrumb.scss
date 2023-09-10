@@ -1,0 +1,37 @@
+@use '../utils' as *;
+
+.tp-breadcrumb {
+    &__bg {
+        @include background;
+        background-color: #250d65;
+    }
+    &__title {
+        color: var(--tp-common-white);
+        font-size: 60px;
+        @media #{$xs} {
+            font-size: 28px;
+        }
+        @media #{$sm} {
+            font-size: 40px;
+        }
+    }
+    &__link  {
+        & span {
+            display: inline-block;
+            color: var(--tp-theme-1);
+            font-size: 20px;
+            font-weight: 500;
+            @media #{$xs,$sm} {
+                font-size: 16px;
+            }
+        }
+        & .breadcrumb-item-active {
+            color: var(--tp-common-white);
+            margin-right: 8px;
+            @include transition(.3s);
+            &:hover {
+                color: var(--tp-theme-1);
+            }
+        }
+    }
+}

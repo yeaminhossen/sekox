@@ -1,0 +1,126 @@
+.sidebar__widget .wp-block-group__inner-container ul li a {
+    padding-left: 0;
+}
+
+/* biography css */
+.social-links {
+    margin-bottom: 10px;
+}
+.social-links a {
+    text-align: center;
+    margin-right: 12px;
+    display: inline-block;
+    color: #878ea3;
+    font-size: 13px;
+}
+.social-links a:hover {
+    color: #444cf7;
+}
+
+/* comment reply */
+.comments-replay a {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1f1841;
+}
+
+.comments-replay a:hover {
+    color: var(--tp-theme-1);
+}
+
+.comments-avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.comment-respond p.comment-notes {
+    margin-bottom: 28px;
+}
+
+div.basic-pagination ul {
+    padding-left: 0;
+}
+
+.comment-respond p.logged-in-as {
+    margin-bottom: 22px;
+    margin-top: 7px;
+}
+
+/* 404 page */
+
+.error__heading h1 {
+    font-size: 170px;
+}
+
+.error__content p {
+    color: var(--tp-text-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    margin: 25px 0;
+}
+
+.tp-breadcrumb__link span.brd_icon i {
+    color: #fff;
+    font-size: 17px;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .tp-breadcrumb__link span.brd_icon i {
+        display: inline-block;
+        transform: translateY(2px);
+    }
+}
+
+
+
+.tp-breadcrumb__link a span {
+    color: #fff;
+}
+
+/* admin bar */
+
+.admin-bar .header-sticky {
+    margin-top: 32px;
+}
+
+.admin-bar .header-2 {
+    margin-top: 32px;
+}
+
+.admin-bar .header-3 {
+    margin-top: 32px;
+}
+
+@media (max-width: 782px) {
+    .admin-bar .header-sticky {
+        margin-top: 46px;
+    }
+    .admin-bar .header-2 {
+        margin-top: 46px!important;
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-bar .header-sticky {
+        margin-top: 0;
+    }
+    .admin-bar .header-2.header-sticky {
+        margin-top: 0!important;
+    }
+}
+
+.admin-bar .tpoffcanvas.opened {
+    padding-top: 60px;
+}
+
+.tpcta__form-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.tpbanner__box-two .tpbanner__thumb-area > img {
+    width: 303px;
+}

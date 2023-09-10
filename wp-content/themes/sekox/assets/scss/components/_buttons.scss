@@ -1,0 +1,94 @@
+@use '../utils' as *;
+
+.tp-btn {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--tp-common-white);
+	background-color: var(--tp-theme-1);
+	padding: 16px 30px;
+	line-height: 1;
+	display: inline-block;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    @include transition(.4s);
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: auto;
+        height: 100%;
+        width: 0;
+        background-color: var(--tp-common-white);
+        transition: 0.5s;
+        display: inline-block;
+        z-index: -1;
+        border-radius: 6px;
+    }
+    &:hover {
+        color: var(--tp-text-body);
+        &::before {
+            left: 0;
+            right: auto;
+            width: 100%;
+        }
+    }
+}
+
+.tp-btn-two {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--tp-common-white);
+	background-color: var(--tp-theme-1);
+	padding: 19px 30px;
+	line-height: 1;
+	display: inline-block;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    @include transition(.4s);
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: auto;
+        height: 100%;
+        width: 0;
+        background-color: var(--tp-common-white);
+        transition: 0.5s;
+        display: inline-block;
+        z-index: -1;
+        border-radius: 50px;
+    }
+    &:hover {
+        color: var(--tp-text-body);
+        &::before {
+            left: 0;
+            right: auto;
+            width: 100%;
+        }
+    }
+}
+.tp-btn-three {
+    position: relative;
+    background-color: var(--tp-theme-1);
+    &:hover {
+        color: var(--tp-common-white);
+    }
+    &::before {
+        background-color: var(--tp-theme-2);
+    }
+}
+.tp-orang-btn {
+	background-color: var(--tp-common-5);
+    &:hover {
+        color: var(--tp-common-white);
+    }
+    &::before {
+        background-color: var(--tp-theme-2);
+    }
+}

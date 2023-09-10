@@ -1,0 +1,84 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  06. FEATURE CSS
+/*----------------------------------------*/
+
+.tpfeature {
+    &__item {
+        &:hover {
+            & .tpfeature__thumb {
+                transform: translate3d(0px, 0, 0px) scale3d(0.955, 0.975, 1) skew(0deg);
+            }
+        }
+    }
+    &__thumb {
+        @include transition(.3s);
+        & img {
+            border-radius: 6px;
+            width: 100%;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(179.97deg, rgba(8, 11, 27, 0) 40.71%, #000 98.16%);
+            border-radius: 6px;
+        }
+    }
+    &__content {
+        position: absolute;
+        bottom: 30px;
+        padding: 40px 35px;
+        padding-bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 6px;
+        @media #{$md} {
+            padding: 40px 15px;
+            padding-bottom: 0;
+        }
+        & span  {
+            color: var(--tp-common-white);
+            opacity: .7;
+            font-size: 14px;
+        }
+    }
+    &__title {
+        color: var(--tp-common-white);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 3px;
+        @media #{$xl,$md} {
+            font-size: 18px;
+        }
+        @media #{$sm} {
+            font-size: 16px;
+        }
+    }
+    &__pagination {
+        & .swiper-pagination-bullet {
+            width: 20px;
+            height: 4px;
+            display: inline-block;
+            border-radius: 50px;
+            background: var(--tp-common-7);
+            @include transition(.3s);
+            margin: 0 40px;
+        }
+        & .swiper-pagination-bullet-active {
+            opacity: 1;
+            width: 40px;
+            background: var(--tp-theme-1);
+        }
+    }
+    &__active {
+        &.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 5px;
+        }
+    }
+}

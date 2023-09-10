@@ -1,0 +1,85 @@
+@use '../utils' as *;
+
+.tp-accordion {
+    & .accordion-item .accordion-button {
+        border-radius: 20px 20px 0 0;
+        &.collapsed{
+            border-radius:35px;
+            padding:20px 55px 20px 30px;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 41, 0.03);
+            @media #{$xs} {
+                // padding: 20px 44px 20px 25px;
+            }
+        }
+    } 
+    & .accordion-item{
+        background-color: #fff;
+        border-radius: 30px;
+        box-shadow: 0px 20px 60px 0px rgba(0, 0, 41, 0.1);
+    }
+    & .accordion-body {
+        padding: 0 97px 20px 73px;
+        font-size: 16px;
+        color: var(--tp-grey-8);
+        @media #{$xl} {
+            padding: 0 60px 20px 73px;
+        }
+        @media #{$md} {
+            padding: 0 45px 20px 73px;
+            font-size: 15px;
+        }
+        @media #{$xs} {
+            padding: 0 25px 20px 68px;
+        }
+    }
+    & .accordion-button:not(.collapsed) {
+        box-shadow: none;
+        color: var(--tp-common-8);
+        padding: 20px 30px 20px 30px;
+    }
+}
+.tpfaq {
+    &__wrapper {
+        & .accordion-button {
+            // background-color: var(--tp-common-white);
+            background: none;
+            position: relative;
+            color: var(--tp-text-1);
+            font-size: 17px;
+            font-weight: 600;
+            @media #{$xs} {
+                font-size: 14px;
+            }
+            &:focus {
+                border-color: transparent;
+                box-shadow: none;
+                outline: 0;
+            }
+            &::after {
+                position: absolute;
+                content: "\f068";
+                font-family: "Font Awesome 5 pro";
+                background-image: none;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 30px;
+                color: var(--tp-common-8);
+                width: auto;
+                height: auto;
+                font-weight: 500;
+                font-size: 14px;
+            }
+            &.collapsed::after {
+                content: "\f067";
+                color: var(--tp-text-1);
+            }
+            & span {
+                margin-right: 20px;
+            }
+        }
+        & .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+        }
+    }
+}
